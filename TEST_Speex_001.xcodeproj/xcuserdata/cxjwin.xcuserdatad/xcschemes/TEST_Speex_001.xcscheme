@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0F76D51A15F4A0FC00055E15"
                BuildableName = "TEST_Speex_001.app"
-               BlueprintName = "TEST_Speex"
-               ReferencedContainer = "container:TEST_Speexx.xcodeproj">
+               BlueprintName = "TEST_Speex_001"
+               ReferencedContainer = "container:TEST_Speex_001.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0F76D51A15F4A0FC00055E15"
             BuildableName = "TEST_Speex_001.app"
-            BlueprintName = "TEST_Speex"
-            ReferencedContainer = "container:TEST_Speexx.xcodeproj">
+            BlueprintName = "TEST_Speex_001"
+            ReferencedContainer = "container:TEST_Speex_001.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -53,8 +53,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0F76D51A15F4A0FC00055E15"
             BuildableName = "TEST_Speex_001.app"
-            BlueprintName = "TEST_Speex"
-            ReferencedContainer = "container:TEST_Speexx.xcodeproj">
+            BlueprintName = "TEST_Speex_001"
+            ReferencedContainer = "container:TEST_Speex_001.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -71,8 +71,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0F76D51A15F4A0FC00055E15"
             BuildableName = "TEST_Speex_001.app"
-            BlueprintName = "TEST_Speex"
-            ReferencedContainer = "container:TEST_Speexx.xcodeproj">
+            BlueprintName = "TEST_Speex_001"
+            ReferencedContainer = "container:TEST_Speex_001.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

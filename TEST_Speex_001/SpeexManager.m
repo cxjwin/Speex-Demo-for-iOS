@@ -46,15 +46,48 @@ void AudioRouteChangePropertyListener(void *inClientData, AudioSessionPropertyID
     
     if (reasonVal == kAudioSessionRouteChangeReason_NewDeviceAvailable ||
         reasonVal == kAudioSessionRouteChangeReason_OldDeviceUnavailable) {
-        if ([intercom.delegate respondsToSelector:@selector(audioSessionRouteHasChanged:)]) {
+        if (intercom.delegate && [intercom.delegate respondsToSelector:@selector(audioSessionRouteHasChanged:)]) {
             [intercom.delegate audioSessionRouteHasChanged:reasonVal];
+        }
+        
+        UInt32 override = kAudioSessionOverrideAudioRoute_Speaker;
+        if (hasHeadset()) {
+            override = kAudioSessionOverrideAudioRoute_None;
+        }
+        OSStatus status = AudioSessionSetProperty(kAudioSessionProperty_OverrideAudioRoute,
+                                                  sizeof(override),
+                                                  &override);
+        if (status) {
+            NSLog(@"couldn't set audio session category");
         }
     }
 }
 
+bool hasHeadset() 
+{
+    CFStringRef route;
+    UInt32 propertySize = sizeof(CFStringRef);
+    AudioSessionGetProperty(kAudioSessionProperty_AudioRoute, &propertySize, &route);
+    if((route == NULL) || (CFStringGetLength(route) == 0)){
+        NSLog(@"AudioRoute: SILENT, do nothing!");
+    } else {
+        NSString* routeStr = (__bridge NSString *)route;
+        NSLog(@"AudioRoute: %@", routeStr);
+        NSRange headphoneRange = [routeStr rangeOfString:@"Headphone" options:NSCaseInsensitiveSearch];
+        NSRange headsetRange = [routeStr rangeOfString:@"Headset" options:NSCaseInsensitiveSearch];
+        if (headphoneRange.location != NSNotFound) {
+            return true;
+        } else if(headsetRange.location != NSNotFound) {
+            return true;
+        }
+    }
+    return false;
+}
+
 #pragma mark - init
 
-+ (void)initialize {
++ (void)initialize 
+{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         OSStatus status = AudioSessionInitialize(CFRunLoopGetCurrent(),
@@ -67,7 +100,8 @@ void AudioRouteChangePropertyListener(void *inClientData, AudioSessionPropertyID
     });
 }
 
-- (id)init {
+- (id)init 
+{
     self = [super init];
     if (self) {
         [self registerForAudioQueueNotifications];
@@ -85,6 +119,15 @@ void AudioRouteChangePropertyListener(void *inClientData, AudioSessionPropertyID
             NSLog(@"couldn't set audio session category");
             return nil;
         }
+        
+        // iOS7 中录音音声太小
+        UInt32 override = kAudioSessionOverrideAudioRoute_Speaker;
+        if (hasHeadset()) {
+            override = kAudioSessionOverrideAudioRoute_None;
+        }
+        status = AudioSessionSetProperty(kAudioSessionProperty_OverrideAudioRoute,
+                                         sizeof(override),
+                                         &override);
         
         status = AudioSessionAddPropertyListener(kAudioSessionProperty_AudioRouteChange,
                                                  AudioRouteChangePropertyListener,
@@ -287,7 +330,8 @@ void AudioRouteChangePropertyListener(void *inClientData, AudioSessionPropertyID
                                                object:nil];
 }
 
-- (void)unregisterForAudioQueueNotifications {
+- (void)unregisterForAudioQueueNotifications 
+{
     [[NSNotificationCenter defaultCenter] removeObserver:self
                                                     name:kInputAudioQueueStarted
                                                   object:nil];
