@@ -330,7 +330,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_PKGINFO_FILE = YES;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/TEST_Speex_001\"/**";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/TEST_Speex_001\"/**";
 				New_Setting = "";
 				ONLY_ACTIVE_ARCH = YES;
@@ -361,7 +361,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_PKGINFO_FILE = YES;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/TEST_Speex_001\"/**";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/TEST_Speex_001\"/**";
 				New_Setting = "";
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
@@ -374,6 +374,7 @@
 		0F76D53A15F4A0FC00055E15 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TEST_Speex_001/TEST_Speex_001-Prefix.pch";
@@ -382,12 +383,14 @@
 					"\"$(SRCROOT)/$(PRODUCT_NAME)\"/**",
 				);
 				INFOPLIST_FILE = "TEST_Speex_001/TEST_Speex_001-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 				);
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = TEST_Speex_001;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -395,6 +398,7 @@
 		0F76D53B15F4A0FC00055E15 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TEST_Speex_001/TEST_Speex_001-Prefix.pch";
@@ -403,12 +407,14 @@
 					"\"$(SRCROOT)/$(PRODUCT_NAME)\"/**",
 				);
 				INFOPLIST_FILE = "TEST_Speex_001/TEST_Speex_001-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 				);
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = TEST_Speex_001;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

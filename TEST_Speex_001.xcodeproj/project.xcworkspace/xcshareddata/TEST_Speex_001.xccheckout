@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>2B6343B4-5A33-4ACF-9FC5-E6DF25C051A7</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TEST_Speex_001</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>2B678A31-36D6-439B-9D34-B2D691C5F797</key>
+		<string>https://github.com/cxjwin/Speex-Demo-for-iOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TEST_Speex_001.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>2B678A31-36D6-439B-9D34-B2D691C5F797</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/cxjwin/Speex-Demo-for-iOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>2B678A31-36D6-439B-9D34-B2D691C5F797</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2B678A31-36D6-439B-9D34-B2D691C5F797</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TEST_Speex_002</string>
+		</dict>
+	</array>
+</dict>
+</plist>
