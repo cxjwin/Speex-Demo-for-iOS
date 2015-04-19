@@ -1,4 +1,4 @@
-/* speex_types.h taken from libogg */
+/* speexdsp_types.h taken from libogg */
 /********************************************************************
  *                                                                  *
  * THIS FILE IS PART OF THE OggVorbis SOFTWARE CODEC SOURCE CODE.   *
@@ -16,13 +16,13 @@
 
  ********************************************************************/
 /**
-   @file speex_types.h
+   @file speexdsp_types.h
    @brief Speex types
 */
 #ifndef _SPEEX_TYPES_H
 #define _SPEEX_TYPES_H
 
-#if defined(_WIN32)
+#if defined(_WIN32) 
 
 #  if defined(__CYGWIN__)
 #    include <_G_config.h>
@@ -119,7 +119,7 @@
 
 #else
 
-#include "speex_config_types.h"
+#include "speexdsp_config_types.h"
 
 #endif
 
